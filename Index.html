@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeysVsNewsX | Вход</title>
+    <link rel="icon" href="images/logo/logo1.png" type="image/logo/unnamed.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #000; /* Черный фон */
+            background-image: url("images/обои/1.jpg"); /*  Замените на URL вашей картинки */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Фон остается фиксированным при прокрутке */
+            color: #fff; /* Белый текст */
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Стиль для рамки */
+        .text-box {
+            border: 2px solid rgba(0, 255, 255, 0.8); /* Неоновый голубой border */
+            padding: 20px; /* Внутренние отступы */
+            margin-bottom: 20px; /* Отступ между рамками и заголовком/кнопкой */
+            border-radius: 10px; /* Закругленные углы */
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Неоновая тень */
+            max-width: 800px;  /* Ограничиваем ширину рамки */
+            background-color: rgba(0, 0, 0, 0.7); /* Почти черный, полупрозрачный фон */
+        }
+
+        h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8),
+                         0 0 20px rgba(0, 255, 255, 0.6),
+                         0 0 30px rgba(0, 255, 255, 0.4);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            line-height: 1.6;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: #fff; /* Белый текст для кнопки */
+            border: 2px solid rgba(0, 255, 255, 0.8);
+            border-radius: 5px;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.7); /* Почти черный, полупрозрачный фон для кнопки */
+        }
+
+        .button:hover {
+            color: #000;
+            background-color: rgba(0, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 1),
+                        0 0 20px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Неоновые эффекты (можно улучшить с помощью JS и CSS анимаций) */
+        .neon-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .neon-border::before,
+        .neon-border::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 5px solid rgba(0, 255, 255, 0.7); /* Голубой неон */
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Голубой неон */
+            animation: neon-animation 5s linear infinite; /* Анимация для динамичности */
+        }
+
+
+        .neon-border::before {
+            animation-delay: 1s; /* Сдвигаем анимацию для эффекта разнообразия */
+        }
+
+
+        @keyframes neon-animation {
+            0% {
+                opacity: 0.5;
+                transform: scale(0.95); /* Небольшое сжатие в начале */
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1); /*  Возвращаемся к исходному размеру */
+            }
+            100% {
+                opacity: 0.5;
+                transform: scale(0.95); /* Возвращаемся к сжатию */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="neon-border"></div>
+
+    <div class="container">
+
+        <h1>Добро пожаловать в мир технологий</h1>
+
+        <div class="text-box">
+            <p>Нажмите на "Узнать больше", чтобы продолжить</p>
+        </div>
+
+        <a href="Главная.html" class="button">Узнать Больше</a>
+    </div>
+
+</body>
+</html>
